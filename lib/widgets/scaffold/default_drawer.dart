@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_design_box/box.dart';
-import 'package:orange_design_system/orange_design_system.dart';
 import 'package:orange_design_system/gen/assets.gen.dart';
+import 'package:orange_design_system/orange_design_system.dart';
 
 import '../list/item_states.dart';
 
@@ -30,7 +30,9 @@ class DefaultDrawer extends StatelessWidget {
             color: DesignColor.white,
             child: Scaffold(
                 appBar: AppBar(
-                    title: title),
+                    title:  Box(
+                        padding: const EdgeInsets.all(DesignSpacing.s8),
+                        child: title)),
                 body: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: DesignSpacing.s16),
@@ -62,7 +64,6 @@ class DefaultDrawer extends StatelessWidget {
       widgets.add(title);
     }
     return Box(
-        margin: const EdgeInsets.all(DesignSpacing.s8),
         padding: const EdgeInsets.all(DesignSpacing.s8),
         onPressed: (context) {},
         child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: widgets));
